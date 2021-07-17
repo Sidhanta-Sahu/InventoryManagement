@@ -1,6 +1,5 @@
-package in.bala.inventory.repository;
-
-import in.bala.inventory.model.Product;
+package in.sidhantasahu.inventory.repository;
+import in.sidhantasahu.inventory.model.Product;
 
 import java.util.HashSet;
 import java.util.Set;

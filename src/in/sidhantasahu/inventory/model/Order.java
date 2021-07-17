@@ -1,4 +1,4 @@
-package in.bala.inventory.model;
+package in.sidhantasahu.inventory.model;
 
 import java.util.Set;
 
