@@ -11,10 +11,10 @@ public class CartController {
     private final HashSet<Product> setOfProducts = new HashSet<>();
 
     /*add product to cart and generate cart id*/
-    public void addToCart(Product p, int quantity) {
+    public void addToCart(Product q, int quantity) {
         customerCart.setId(customerCart.getId() + 1);
-        p.setQuantity(quantity);
-        setOfProducts.add(p);
+        q.setQuantity(quantity);
+        setOfProducts.add(q);
         customerCart.setProducts(setOfProducts);
     }
 

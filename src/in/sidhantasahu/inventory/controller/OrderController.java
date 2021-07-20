@@ -48,7 +48,7 @@ public class OrderController {
         Product[] orderedProduct = new Product[10];
         int i = 0;
         while (checkOrder.hasNext()) {
-            orderedProduct[i] = repo.getProductById(checkOrder.next().getId());
+            orderedProduct[i]=checkOrder.next();
             productIds[i] = orderedProduct[i].getId();
             quantities[i] = orderedProduct[i].getQuantity();
             i++;
@@ -56,9 +56,8 @@ public class OrderController {
         Product repoProducts[]=new Product[10];
         for (int j = 0; j < i; j++) {
             repoProducts[j]=repo.getProductById(productIds[j]);
-            repoProducts[j].toString();
-            repoProducts[j].setQuantity(repoProducts[j].getQuantity());
             repo.deleteProduct(productIds[j]);
+            repoProducts[j].setQuantity(repoProducts[j].getQuantity()-quantities[j]);
             repo.addProduct(repoProducts[j]);
         }
 

@@ -40,7 +40,8 @@ public class ProductController {
             System.out.println("Enter valid quantity");
         } else {
             /* if product id and quantity is validated, add the product to customer's cart*/
-            customerCartController.addToCart(p, quantity);
+            Product q=new Product(p.getId(),p.getName(),p.getPrice(),quantity);
+            customerCartController.addToCart(q, quantity);
         }
     }
 
